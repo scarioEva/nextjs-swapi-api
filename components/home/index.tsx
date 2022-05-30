@@ -12,7 +12,6 @@ export const HomePage = () => {
     fetch(`https://swapi.dev/api/people/?page=${page}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setList(data?.results);
         setTotalPage(Math.ceil(data?.count / 10));
       })
